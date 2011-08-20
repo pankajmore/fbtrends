@@ -1,7 +1,4 @@
-var http = require('http');
-
-var server = http.createServer(function(req, res) {
-      res.writeHead(200);
-        res.end('Hello Http');
-});
-server.listen(80);
+var express = require("express"),
+        app = express.createServer();
+app.use(express.static(__dirname + '/html'));
+app.listen(3001);
